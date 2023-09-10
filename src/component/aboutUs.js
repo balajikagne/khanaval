@@ -1,5 +1,6 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
+import {NavLink} from 'react-router-dom';
 const aboutUs = () => {
   return (
     <>
@@ -11,30 +12,12 @@ const aboutUs = () => {
         </label>
         <label class="logo"><a href="/">MCard</a></label>
         <ul>
-            <li class="b1"><a href="/" class="active">Home</a></li>
+            <li class="b1"><NavLink to="/" class="active">Home</NavLink></li>
             <li class="b1"><a href="#menus">Menu</a></li>
-            <li class="b1"><a href="/aboutUs">About</a></li>
+            <li class="b1"><NavLink to="/aboutUs" className='navli'>About</NavLink></li>
             <li class="b1"><a href="https://wa.link/1h8jb7" id="pbtn">Help</a></li>
         </ul>
     </nav>
-
-    <div className="slider-container" id="home">
-                <div id="slider">
-                    <img src="p1.jpg" alt=""  className="slides active"></img>
-                    <img src="p2.png" alt=""  className="slides"></img>
-                    <img src="p3.png" alt="" className="slides"></img>
-                    <img src="p4.png" alt="" className="slides"></img>
-                    <img src="p5.png" alt="" className="slides"></img>
-                    
-                    <div className="dots-container">
-                     <div className="dot activeDot"></div>
-                        <div className="dot"></div>
-                        <div className="dot"></div>
-                        <div className="dot"></div>
-                        <div className="dot"></div>        
-                     </div>
-                </div>
-            </div>
 
 
 
@@ -93,7 +76,7 @@ I am Balaji, one of the proud co-founders of Zyka Meal, a dynamic food delivery 
   </div>
 </div>
 
-<div className="bg-light py-5">
+{/* <div className="bg-light py-5">
   <div className="container py-5">
     <div className="row mb-4">
       <div className="col-lg-5">
@@ -152,16 +135,16 @@ I am Balaji, one of the proud co-founders of Zyka Meal, a dynamic food delivery 
             <li className="list-inline-item"><a href="#" className="social-link"><i className="fa fa-linkedin"></i></a></li>
           </ul>
         </div>
-      </div>
+      </div> */}
 
-    </div>
+    {/* </div>
   </div>
-</div>
+</div> */}
 
 
 <footer className="bg-light pb-5">
   <div className="container text-center">
-    <p className="font-italic text-muted mb-0">&copy; Copyrights Company.com All rights reserved.</p>
+    <p className="font-italic text-muted mb-0">&copy; Copyrights zyka.com All rights reserved.</p>
   </div>
 </footer>
     </>

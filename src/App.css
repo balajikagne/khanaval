@@ -29,6 +29,12 @@ nav{
   margin-bottom: -10px;
   text-decoration: none;
 }
+ul >li >.navli{
+  color:rgb(255, 128, 0);
+}
+ul >li >.navli:hover{
+  color:rgb(255, 128, 0);
+}
 
 nav ul{
   float:right;
@@ -223,6 +229,7 @@ section>.items>.item >a:hover{
       width: 60px;
       background-color: #1b9bff;
       cursor: pointer;
+      margin-left: 20px;
   }
   section>.items>.item >a{
       text-align: center;
@@ -314,12 +321,12 @@ button:hover{
   margin-top: 130px;
 }
 .sec2 >h1{
-  margin-left: 110px;
-  font-size: 1cm;
+  font-size: 0.7cm;
+  margin-left: 50px;
 }
 .sec3 >h1{
-  margin-left: 110px;
-  font-size: 1cm;
+  margin-left: 60px;
+  font-size: 0.7cm;
 }
 .sec2 >p{
   font-size: 0.5cm;
@@ -356,6 +363,9 @@ footer >#chatbox >a{
   bottom: -20px;
   text-decoration: none;
 }
+.finfo>li>a{
+  text-decoration: none;
+}
 @media (max-width:480px) {
   footer > .fnav{
       display: flex;
@@ -371,8 +381,10 @@ footer >#chatbox >a{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    font-size: 0.4cm;
+    font-size: 0.3cm;
     left: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px;
     background-color: none;
   }
   footer > #chatbox{
@@ -382,12 +394,15 @@ footer >#chatbox >a{
   footer >#chatbox >a{
     height: 50px;
     width: 50px;
-    font-size: 0.1cm;
+    font-size: 0.0cm;
     margin-bottom: 50px;
     margin-right: 50px;
     position:fixed;
     right: -10px;
     bottom: -20px;
+    text-decoration: none;
+  }
+  .finfo>li>a{
     text-decoration: none;
   }
 }
@@ -471,4 +486,18 @@ footer >#chatbox >a{
   width: 80px;
   cursor: pointer;
 }
+
+
+
+.container{
+  margin-top: 100px;
+  
+}
+@media (max-width:400px){
+  .container{
+    margin-top: 100px;
+    width: 100%;
+  }
+}
+
 

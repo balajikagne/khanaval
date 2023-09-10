@@ -1,35 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css';
-import "react-slideshow-image/dist/styles.css"
-import { Fade,Zoom,Slide } from 'react-slideshow-image';
-const slideImages=[
-    {
-        url:"p1.jpg",
-        caption:"frist image"
-    },
-    {
-        url:"p2.png",
-        caption:"second image"
-    },
-    {
-        url:"p3.png",
-        caption:"third image"
-    },
-    {
-        url:"p4.png",
-        caption:"fourth image"
-    }
-];
-
-const divStyle={
-    display:"flex",
-    alignItems:"center",
-    justifyContent:"center",
-    height:"600px",
-    backgroundSize: "cover",
-    position:"relative",
-    top:"100px"
-}
+import {Carousel} from 'react-bootstrap';
+import {NavLink} from 'react-router-dom';
 const home = () => {
   return (
     <>
@@ -40,40 +12,38 @@ const home = () => {
         </label>
         <label className="logo"><a href="/">MCard</a></label>
         <ul>
-            <li className="b1"><a href="/" className="active">Home</a></li>
+            <li className="b1"><NavLink to="/" className="navli">Home</NavLink></li>
             <li className="b1"><a href="#menus">Menu</a></li>
-            <li className="b1"><a href="/aboutUs">About</a></li>
+            <li className="b1"><NavLink to="/aboutUs" className="navli">About</NavLink></li>
             <li className="b1"><a href="https://wa.link/1h8jb7" id="pbtn">Help</a></li>
         </ul>
     </nav>
 
-    <div className="slider-contain" id="home">
-        <Slide>
-            {slideImages.map((image,index)=>(
-                <div key={index}>
-                    <div style={{...divStyle,backgroundImage:`url(${image.url})`}}>
-                    </div>
-                </div>
-            ))}
-        </Slide>
-                {/* <div id="slider">
-                    <img src="p1.jpg" alt=""  className="slides active"></img>
-                    <img src="p2.png" alt=""  className="slides"></img>
-                    <img src="p3.png" alt="" className="slides"></img>
-                    <img src="p4.png" alt="" className="slides"></img>
-                    <img src="" alt="" className="slides"></img>
-                    
-                    <div className="dots-container">
-                     <div className="dot activeDot"></div>
-                        <div className="dot"></div>
-                        <div className="dot"></div>
-                        <div className="dot"></div>
-                        <div className="dot"></div>        
-                     </div>
-                </div> */}
-            </div>
-
-
+     <div className='container'>
+     <Carousel>
+                <Carousel.Item interval={2000}>
+                    <img
+                        className="d-block w-100"
+                        src="p1.jpg"
+                        alt="First slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
+                    <img
+                        className="d-block w-100"
+                        src="p2.png"
+                        alt="Second slide"
+                    />
+                </Carousel.Item>
+                <Carousel.Item interval={2000}>
+                    <img
+                        className="d-block w-100"
+                        src="p3.png"
+                        alt="Third slide"
+                    />
+                </Carousel.Item>
+            </Carousel>
+     </div>
         <section id="menus">
         <div className="items1"> 
             <h2>Inspiration for your first order</h2>

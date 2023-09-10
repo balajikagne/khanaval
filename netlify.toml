@@ -1,0 +1,7 @@
+[[redirect]]
+from="/"
+to="/aboutUs"
+
+[[redirect]]
+from="/aboutUs"
+to="/"

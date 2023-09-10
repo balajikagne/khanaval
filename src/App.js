@@ -12,7 +12,6 @@ const App = () => {
         <Route path="/aboutUs" element={<Aboutus />} />
       </Routes>
     </div>
-
   )
 }
 
